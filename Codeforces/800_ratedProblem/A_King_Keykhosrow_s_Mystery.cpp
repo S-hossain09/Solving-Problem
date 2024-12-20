@@ -2,7 +2,7 @@
  *	author 	: SahilH
  **/
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 // Types
@@ -25,20 +25,22 @@ using namespace std;
 
 void solve()
 {
-    ll totalRow, totalCol, personRow, personCol;
-    cin >> totalRow >> totalCol >> personRow >> personCol;
+    int a, b;
+    cin >> a >> b;
 
-    ll totalPerson = totalRow * totalCol;
-    ll perPosition = (personRow - 1) * totalCol + personCol;
+    for (int i = 1; i <= min(a, b); i++)
+    {
+        int ans = max(a, b) * i;
 
-    ll rowLeft = (totalRow- personRow);
-    ll person_left = totalPerson - perPosition;
-
-    person_left -= rowLeft;
-
-    ll ans = rowLeft * (1 + (abs(1 - totalCol)));
-
-    cout << ans+person_left << endl;
+        if (ans >= min(a, b))
+        {
+            if (ans % a == ans % b)
+            {
+                cout << ans << endl;
+                break;
+            }
+        }
+    }
 }
 
 int32_t main()
