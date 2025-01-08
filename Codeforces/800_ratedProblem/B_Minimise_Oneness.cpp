@@ -2,7 +2,7 @@
  *	author 	: SahilH
  **/
 
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Types
@@ -25,22 +25,17 @@ using namespace std;
 
 void solve()
 {
-    int a, b;
-    cin >> a >> b;
+    int n;
+    cin >> n;
+    vector<int> arr(n);
 
-    for (int i = 1; i <= min(a, b); i++)
-    {
-        int ans = max(a, b) * i;
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+    
+    int minV = *min_element(arr.begin(),arr.end());
+    int maxV = *max_element(arr.begin(),arr.end());
 
-        if (ans >= min(a, b))
-        {
-            if (ans % a == ans % b)
-            {
-                cout << ans << endl;
-                break;
-            }
-        }
-    }
+    cout << ((n-1)*maxV) - ((n-1)*minV);
 }
 
 int32_t main()
