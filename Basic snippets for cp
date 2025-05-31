@@ -1,0 +1,229 @@
+{
+  /*
+    Template for multiple test cases
+  */
+  "WithTestCaseCPPTemplate": {
+    "prefix": "tsc",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "#ifdef LOCAL",
+      "#include \"debug.h\"",
+      "#else",
+      "#define dbg(...)",
+      "#endif",
+      "",
+      "void solve()",
+      "{",
+      "    $0",
+      "}",
+      "",
+      "int main()",
+      "{",
+      "    ios_base::sync_with_stdio(0);",
+      "    cin.tie(0); cout.tie(0);",
+      "",
+      "    int t; cin >> t;",
+      "    while(t--)",
+      "        solve();",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "C++ Template with test case"
+  },
+  /*
+   Template for a single test case
+  */
+  "NoTestCaseCPPTemplate": {
+    "prefix": "ntc",
+    "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "",
+      "#ifdef LOCAL",
+      "#include \"debug.h\"",
+      "#else",
+      "#define dbg(...)",
+      "#endif",
+      "",
+      "void solve()",
+      "{",
+      "    $0",
+      "}",
+      "",
+      "int main()",
+      "{",
+      "    ios_base::sync_with_stdio(0);",
+      "    cin.tie(0); cout.tie(0);",
+      "",
+      "    solve();",
+      "",
+      "    return 0;",
+      "}"
+    ],
+    "description": "C++ Template without test case"
+  },
+  /*
+   Input Integer n
+  */
+  "taking n input": {
+    "prefix": "nin",
+    "body": [
+      "int ${1:n}; cin >> ${1:n};",
+      ""
+    ],
+    "description": "n input"
+  },
+  /*
+   Loop from 0 to n-1
+  */
+  "F0R": {
+    "prefix": "frl",
+    "body": [
+      "for(int ${1:i} = 0; ${1:i} < ${2:n}; ++${1:i})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "for(0->less than x)"
+  },
+  /*
+   Range-based for loop
+  */
+  "every_element": {
+    "prefix": "ech",
+    "body": [
+      "for(auto& ${1:it} : ${2})",
+      "{",
+      "    ${0}",
+      "}"
+    ],
+    "description": "range-based loop for each element"
+  },
+  /*
+    Declare a vector
+  */
+  "vector": {
+    "prefix": "vec",
+    "body": [
+      "vector<${1}> ${0}"
+    ],
+    "description": "declare vector"
+  },
+  /*
+   Declare a pair of integers
+  */
+  "pair": {
+    "prefix": "pii",
+    "body": [
+      "pair<int, int> ${0}"
+    ],
+    "description": "pair of ints"
+  },
+  /*
+   Declare an unordered map
+  */
+  "unordered map": {
+    "prefix": "ump",
+    "body": [
+      "unordered_map<${1}, ${2}> ${0}"
+    ],
+    "description": "unordered_map"
+  },
+  /*
+   Declare an ordered map
+  */
+  "ordered map": {
+    "prefix": "mp",
+    "body": [
+      "map<${1}, ${2}> ${0}"
+    ],
+    "description": "ordered map"
+  },
+  /*
+    Declare a 2D vector with default value
+  */
+  "declear 2D vector": {
+    "prefix": "v2d",
+    "body": [
+      "vector<vector<${1:int}>> ${2:A}(${3:n}, vector<${1:int}>(${4:m}, ${5:0}));${0}"
+    ],
+    "description": "2D vector declaration"
+  },
+  /*
+    Input values into 1D vector using range-based loop
+  */
+  "input 1D vector": {
+    "prefix": "aei",
+    "body": [
+      "for(auto &x : ${1:arr})",
+      "    cin >> x;"
+    ],
+    "description": "array each input - aei"
+  },
+  /*
+    Declare a vector of size n and input values using index
+  */
+  "n Size array with i index": {
+    "prefix": "nia",
+    "body": [
+      "vector<int> arr(n);", // Declare vector of size n
+      "for(int i = 0; i<n; i++)", // Input using index
+      "   cin >> arr[i];",
+      ""
+    ],
+    "description": "n Size array with i index"
+  },
+  /*
+    Input a string
+  */
+  "taking string input": {
+    "prefix": "stin",
+    "body": [
+      "string str; cin >> str;"
+    ],
+    "description": "taking string input"
+  },
+  /*
+    Output "YES" with newline
+  */
+  "yesPrint": {
+    "prefix": "yes",
+    "body": [
+      "cout << \"YES\\n\";"
+    ],
+    "description": "printing yes with a newline"
+  },
+  /*
+    Output "NO" with newline
+  */
+  "noPrint": {
+    "prefix": "no",
+    "body": [
+      "cout << \"NO\\n\";"
+    ],
+    "description": "printing no with a newline"
+  },
+  /*
+    Output newline character
+  */
+  "new line": {
+    "prefix": "nl",
+    "body": [
+      "<< \"\\n\""
+    ],
+    "description": "new line"
+  },
+  /*
+    Output space character
+  */
+  "space": {
+    "prefix": "spc",
+    "body": [
+      "<< \" \""
+    ],
+    "description": "printing space"
+  }
+}
